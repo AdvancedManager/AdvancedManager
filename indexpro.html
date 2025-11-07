@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CR7-WebLearn</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (for social icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+  <link rel="stylesheet" href="formatpro.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        <!-- استبدل logo.png برابط الشعار الخاص بك -->
+        <img src="logo/Clipped_image_20251025_190416.png" alt="PraRoz logo" class="logo" />
+        
+      </div>
+
+      <nav class="menu">
+        <a href="#">HOME</a>
+        <a href="HtmlLearn.html" class="active">HTML</a>
+        <a href="LearnCSS.html" class="active">CSS</a>
+        <a href="About.html">ABOUT</a>
+        
+        
+      </nav>
+
+      <div class="search">
+        <input type="text" placeholder="Type to Search" aria-label="Search" />
+        <button>Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero">
+    <!-- خلفية تم تحديدها في CSS عبر background-image -->
+    <div class="overlay"></div>
+
+    <div class="container hero-inner">
+      <!-- الجانب الأيسر: نصوص المقدمة -->
+      <section class="hero-left">
+        <h2 class="eyebrow">Web Design &</h2>
+        <h1 class="hero-title">
+          <span class="big-light">Development</span><br />
+          <span class="course">Course</span>
+        </h1>
+        <p class="hero-desc">
+          Web Design is a specialisation of the design stream. They also use HTML, CSS, WYSIWYG editing software, mark up validators etc., to create design elements.
+        </p>
+
+        <a class="btn-join" href="#">JOIN US</a>
+      </section>
+
+      <!-- الجانب الأيمن: بطاقة تسجيل الدخول -->
+      <aside class="login-card" aria-labelledby="login-heading">
+        <div class="login-inner">
+          <h3 id="login-heading" class="login-title">Login Here</h3>
+
+          <form class="login-form" action="#" method="post" onsubmit="return false;">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter Email Here" required>
+
+            <label class="sr-only" for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter Password Here" required>
+
+            <button class="btn-login" type="submit">Login</button>
+          </form>
+
+          <p class="signup-line">Don't have an account? <a href="#">Sign up here</a></p>
+          <div class="divider"></div>
+
+          <p class="social-line">Log in with</p>
+          <div class="social-icons">
+            <a href="https//:facebook.com" target="_blank" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https//:instagram.com" target="_blank" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https//:twitter.com"  target="_blank"aria-label="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https//:google.com" target="_blank" aria-label="google"><i class="fab fa-google"></i></a>
+            <a href="https//:skype.com" target="_blank" aria-label="skype"><i class="fab fa-skype"></i></a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+ 
+</body>
+</html>

@@ -1,0 +1,228 @@
+/* ---------- متغيرات الألوان والخطوط ---------- */
+:root{
+  --orange: #ff7a00;         /* اللون البرتقالي */
+  --dark-overlay: rgba(0,0,0,0.55);
+  --card-bg: rgba(0,0,0,0.75);
+  --text-light: #ffffff;
+  --muted: rgba(255,255,255,0.8);
+  --max-width: 1200px;
+  --container-padding: 24px;
+  --radius: 10px;
+  --font-sans: "Montserrat", system-ui, Arial, sans-serif;
+  --font-serif: "Merriweather", Georgia, serif;
+}
+
+/* ---------- تنسيقات عامة ---------- */
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; font-family:var(--font-sans); color:var(--text-light); }
+a { color: var(--orange); text-decoration: none; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--container-padding); }
+
+/* ---------- Navigation ---------- */
+.nav { position: absolute; top: 0; left: 0; right: 0; z-index: 20; padding: 18px 0; }
+.nav-inner { display:flex; align-items:center; gap: 24px; justify-content: space-between; }
+.logo img { height:34px; display:block; }
+
+/* menu */
+.menu { display:flex; gap:22px; align-items:center; font-weight:600; letter-spacing:1px; }
+.menu a { color: rgba(255,255,255,0.9); font-size:14px; padding:6px 4px; }
+.menu a:hover { color: var(--orange); }
+
+/* search box */
+.search{ display:flex; align-items:center; gap:8px; }
+.search input{
+  width:180px;
+  padding:8px ;
+  border-radius:4px;
+  border:1px solid orange;
+  background: rgba(0,0,0,0.35);
+  color:var(--text-light);
+  outline:none;
+}
+.search button{
+  background:var(--orange);
+  border:#ff7a00 2px;
+  padding:8px ;
+  border-radius:6px;
+  color:#fff;
+  font-weight:600;
+}
+
+/* ---------- Hero section ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display:flex;
+  align-items:center;
+  color:var(--text-light);
+  background-image: url("backgrounds/background2.jpg"); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat:no-repeat;
+  z-index: 1;
+}
+
+/* غطاء داكن فوق الصورة لتحسين التباين */
+.hero .overlay {
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.6) 100%);
+  z-index:1;
+}
+
+/* داخل المحتوى */
+.hero-inner {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  gap:32px;
+  align-items: flex-start;
+  width:100%;
+  padding: 80px 0;
+}
+
+/* الجانب الأيسر */
+.hero-left {
+  width: 60%;
+  color: var(--text-light);
+  padding-top: 40px;
+}
+
+/* تسميات */
+.eyebrow { font-family: var(--font-serif); font-size:44px; margin:0; opacity:0.98; font-weight:700; }
+.hero-title { margin:8px 0 18px 0; line-height: 0.95; font-family: var(--font-serif); }
+.big-light {
+  display:inline-block;
+  font-weight:900;
+  font-size:78px;
+  color:var(--orange);
+  text-transform: none;
+}
+.course { display:block; font-size:56px; font-weight:700; color:var(--text-light); }
+
+/* وصف */
+.hero-desc {
+  max-width: 620px;
+  color: rgba(255,255,255,0.9);
+  margin-top:18px;
+  line-height:1.6;
+}
+
+/* زر الانضمام */
+.btn-join {
+  display:inline-block;
+  margin-top: 26px;
+  background:var(--orange);
+  padding:12px 26px;
+  border-radius: 12px;
+  color:#fff;
+  font-weight:700;
+  box-shadow: 0 6px 14px rgba(255,122,0,0.15);
+}
+
+/* ---------- بطاقة تسجيل الدخول (على اليمين) ---------- */
+.login-card {
+  width: 360px;
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 18px;
+  margin-left: auto;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  transform: translateY(20px);
+}
+
+/* داخل البطاقة */
+.login-inner { padding: 24px; color:var(--text-light); text-align:center; }
+.login-title {
+  background: linear-gradient(180deg, #fff 0%, #fff 100%);
+  color: var(--orange);
+  display:inline-block;
+  padding:10px 26px;
+  border-radius:12px;
+  margin: 0 0 18px 0;
+  font-weight:700;
+}
+
+/* مدخلات الفورم */
+.login-form { display:flex; flex-direction:column; gap:12px; margin-bottom:8px; }
+.login-form input{
+  padding:12px 14px;
+  border-radius:6px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid rgba(255,255,255,0.12);
+  color:var(--text-light);
+  outline: none;
+}
+.login-form input::placeholder { color: rgba(255,255,255,0.6); }
+
+.btn-login{
+  margin-top:6px;
+  padding:12px 12px;
+  border-radius:10px;
+  border:none;
+  background: var(--orange);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* سطر التسجيل */
+.signup-line { font-size:14px; color: rgba(255,255,255,0.85); margin:12px 0 8px; }
+
+/* فاصل */
+.divider { height:1px; background: rgba(255,255,255,0.06); margin:12px 0; }
+
+.logo{
+    width: 50px;
+    height: 90px;
+}
+
+/* أيقونات التواصل الاجتماعي */
+.social-line { font-size:13px; margin-bottom:8px; color: rgba(255,255,255,0.75); }
+.social-icons { display:flex; gap:10px; justify-content:center; }
+.social-icons a{
+  display:inline-flex;
+  width:40px; height:40px;
+  align-items:center; justify-content:center;
+  background: rgba(152, 46, 46, 0.06);
+  border-radius:50%;
+  color:var(--text-light);
+  font-size:16px;
+}
+
+/* ------------ استجابات (responsive) ------------ */
+@media (max-width: 980px) {
+  .hero-left { width: 55%; }
+  .login-card { width: 320px; }
+  .big-light { font-size:64px; }
+  .course { font-size:46px; }
+}
+
+@media (max-width: 780px) {
+  .nav-inner { gap:12px; }
+  .menu { display:none; }
+  .search input { width:120px; }
+
+  .hero-inner { flex-direction: column; align-items:flex-start; padding: 60px 0; }
+  .hero-left { width:100%; padding-right:0; padding-top:14px; }
+  .login-card {
+    width:100%;
+    margin-left:0;
+    margin-top:28px;
+    transform:none;
+  }
+
+  .big-light { font-size:44px; }
+  .course { font-size:34px; }
+  .hero-desc { max-width:100%; }
+}
+
+/* شاشة صغيرة جدًا */
+@media (max-width:420px){
+  .search { display:none; }
+  .hero { padding-bottom: 40px; }
+  .logo img { height:28px; }
+  .eyebrow { font-size:28px; }
+  .hero-title { font-size: 28px; }
+}

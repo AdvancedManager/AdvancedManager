@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Learn CSS — Full Tutorial</title>
+    <meta name="description" content="A complete CSS tutorial with detailed explanations and examples for beginners." />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            background: linear-gradient(135deg, #0f1113 0%, #1b1d20 60%);
+            color: #e6eef6;
+            font-size: 18px;
+            /* تكبير الخط */
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 36px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02)
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px
+        }
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #ff8a00, #ffb94d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(255, 136, 0, 0.12)
+        }
+
+        .brand h1 {
+            font-size: 18px;
+            letter-spacing: 0.6px
+        }
+
+        .nav {
+            display: flex;
+            gap: 18px;
+            align-items: center
+        }
+
+        .nav a {
+            color: rgba(230, 238, 246, 0.8);
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 6px
+        }
+
+        .nav a.active {
+            background: rgba(255, 136, 0, 0.08);
+            color: #ffb94d
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .search input {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: inherit
+        }
+
+        .search button {
+            background: linear-gradient(180deg, #ff8a00, #ff6d00);
+            border: none;
+            padding: 9px 12px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer
+        }
+
+        .hero {
+            padding: 80px 56px;
+            text-align: left
+        }
+
+        .eyebrow {
+            color: rgba(230, 238, 246, 0.65);
+            font-weight: 600;
+            margin-bottom: 16px
+        }
+
+        .title {
+            font-size: 72px;
+            line-height: 0.95;
+            color: #ffad33;
+            font-weight: 800;
+            margin-bottom: 8px;
+            text-shadow: 0 6px 20px rgba(0, 0, 0, 0.6)
+        }
+
+        .subtitle {
+            font-size: 48px;
+            color: #e6eef6;
+            font-weight: 700;
+            margin-bottom: 18px
+        }
+
+        .desc {
+            max-width: 760px;
+            color: rgba(230, 238, 246, 0.78);
+            font-size: 18px;
+            margin-bottom: 28px;
+            line-height: 1.7
+        }
+
+        .cta {
+            display: inline-block;
+            background: linear-gradient(180deg, #ff8a00, #ff6d00);
+            color: white;
+            padding: 14px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        .lessons {
+            padding: 18px 56px 80px
+        }
+
+        .lesson {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.02)
+        }
+
+        .lesson h3 {
+            color: #ffd39a;
+            margin-bottom: 12px;
+            font-size: 24px
+        }
+
+        .lesson p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #d9e4ef;
+            font-size: 18px
+        }
+
+        .lesson ul {
+            margin-left: 20px;
+            margin-bottom: 12px
+        }
+
+        .code {
+            background: #0b0c0d;
+            padding: 14px;
+            border-radius: 8px;
+            color: #cfe9ff;
+            font-family: monospace;
+            font-size: 15px;
+            overflow: auto;
+            margin-bottom: 12px
+        }
+
+        .footer-cta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 56px;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            margin-top: 24px
+        }
+
+        .next-btn {
+            background: linear-gradient(180deg, #ff8a00, #ff6d00);
+            padding: 12px 20px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 700;
+            text-decoration: none
+        }
+
+        .example {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            margin-bottom: 20px
+        }
+
+        @media(max-width:980px) {
+            .title {
+                font-size: 48px
+            }
+
+            .subtitle {
+                font-size: 28px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="logo">CR7</div>
+            <div>
+                <h1>WebLearn</h1>
+                <div style="font-size:12px;color:rgba(230,238,246,0.55)">CSS Tutorial</div>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="indexpro.html">Home</a>
+            <a href="HtmlLearn.html">HTML</a>
+            <a href="#courses" class="active">CSS</a>
+            <a href="About.html">About</a>
+            <div class="search"><input placeholder="Type to Search" aria-label="search"><button>Search</button></div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="eyebrow">Web Design &</div>
+            <div class="title">Styling</div>
+            <div class="subtitle">Learn CSS</div>
+            <p class="desc">Learn CSS step-by-step with visual examples and styled components. Build on your HTML
+                knowledge to create beautiful, responsive web designs. This tutorial covers everything from selectors
+                and box model to flexbox, typography, buttons, animations, and responsive design.</p>
+            <a class="cta" href="#lessons">Start Learning</a>
+        </section>
+
+        <section id="lessons" class="lessons">
+
+            <article class="lesson" id="intro">
+                <h3>1. Introduction to CSS</h3>
+                <p>CSS (Cascading Style Sheets) defines how HTML elements are displayed on screen, paper, or other
+                    media. It allows you to separate content (HTML) from presentation (CSS).</p>
+                <div class="code">p { color: blue; font-size: 20px; }</div>
+                <p>By using CSS, you can control colors, spacing, fonts, layout, and much more, making your websites
+                    visually appealing.</p>
+            </article>
+
+            <article class="lesson" id="selectors">
+                <h3>2. CSS Selectors</h3>
+                <p>Selectors target HTML elements so you can style them. Common types include:</p>
+                <ul>
+                    <li>Element selector: <code>p { }</code> — selects all &lt;p&gt; elements.</li>
+                    <li>Class selector: <code>.className { }</code> — selects elements with the class.</li>
+                    <li>ID selector: <code>#idName { }</code> — selects a specific element with an ID.</li>
+                    <li>Attribute selector: <code>[type="text"] { }</code> — selects elements by attribute.</li>
+                </ul>
+                <div class="code">h1 { color: red; }<br>p { color: gray; }</div>
+            </article>
+
+            <article class="lesson" id="boxmodel">
+                <h3>3. The Box Model</h3>
+                <p>Every element is a box with four parts:</p>
+                <ul>
+                    <li><strong>Content:</strong> The actual text or image.</li>
+                    <li><strong>Padding:</strong> Space inside the box, around the content.</li>
+                    <li><strong>Border:</strong> Surrounds padding and content.</li>
+                    <li><strong>Margin:</strong> Space outside the border.</li>
+                </ul>
+                <div class="code">div {<br>&nbsp;&nbsp;border: 1px solid black;<br>&nbsp;&nbsp;padding:
+                    10px;<br>&nbsp;&nbsp;margin: 20px;<br>}</div>
+            </article>
+
+            <article class="lesson" id="colors">
+                <h3>4. Colors and Backgrounds</h3>
+                <p>Use color names, hex codes, or RGB values to style text and backgrounds:</p>
+                <div class="code">body { background-color: #222; color: #fff; }<br>h1 { color: #ff8a00; }</div>
+                <p>Backgrounds can also be gradients, images, or patterns for a visually appealing design.</p>
+            </article>
+
+            <article class="lesson" id="typography">
+                <h3>5. Typography</h3>
+                <p>Typography controls the appearance of text:</p>
+                <ul>
+                    <li>Font family: <code>font-family: Arial, sans-serif;</code></li>
+                    <li>Font size: <code>font-size: 18px;</code></li>
+                    <li>Font weight: <code>font-weight: 700;</code></li>
+                    <li>Line height: <code>line-height: 1.6;</code></li>
+                    <li>Text alignment: <code>text-align: center;</code></li>
+                </ul>
+                <div class="code">p { font-family:'Arial',sans-serif; font-size:18px; font-weight:600; line-height:1.6;
+                    text-align:center; }</div>
+                <div class="example">
+                    <p>This is a sample text using CSS typography settings.</p>
+                </div>
+            </article>
+
+            <article class="lesson" id="flexbox">
+                <h3>6. Flexbox Layout</h3>
+                <p>Flexbox is used for flexible and responsive layouts. Properties include:</p>
+                <ul>
+                    <li>display: flex</li>
+                    <li>flex-direction: row | column</li>
+                    <li>justify-content: space-between | center</li>
+                    <li>align-items: center | stretch</li>
+                    <li>flex-wrap: wrap</li>
+                </ul>
+                <div class="code">.container { display: flex; justify-content: space-between; align-items: center; }
+                </div>
+                <div class="example flex-container">
+                    <div style="background:#ff8a00;padding:12px;border-radius:8px;">Item 1</div>
+                    <div style="background:#ffb94d;padding:12px;border-radius:8px;">Item 2</div>
+                    <div style="background:#ff6d00;padding:12px;border-radius:8px;">Item 3</div>
+                </div>
+            </article>
+
+            <article class="lesson" id="buttons">
+                <h3>7. Styling Buttons</h3>
+                <p>Buttons can be styled for modern UI:</p>
+                <div class="code">button { background: linear-gradient(180deg,#ff8a00,#ff6d00); color:white;
+                    padding:12px 20px; border-radius:10px; border:none; cursor:pointer; font-weight:700; }</div>
+                <div class="example flex-container">
+                    <button>Primary</button>
+                    <button style="background:#ffd39a;color:#000;">Secondary</button>
+                </div>
+            </article>
+
+            <article class="lesson" id="animations">
+                <h3>8. Animations & Transitions</h3>
+                <p>CSS animations and transitions add interactivity:</p>
+                <div class="code">
+                    @keyframes example { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform:
+                    scale(1); } }<br>
+                    .animate { animation: example 2s infinite; }
+                </div>
+                <div class="example flex-container">
+                    <div class="animate" style="width:60px;height:60px;background:#ff8a00;border-radius:50%;"></div>
+                    <div style="width:60px;height:60px;background:#ffb94d;border-radius:50%;transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.3)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                </div>
+            </article>
+
+            <article class="lesson" id="responsive">
+                <h3>9. Responsive Design</h3>
+                <p>Responsive design ensures your website adapts to all devices. Techniques include:</p>
+                <ul>
+                    <li>Media queries: <code>@media (max-width:768px) { ... }</code></li>
+                    <li>Flexible units: %, em, rem instead of px</li>
+                    <li>Flexible layouts using flexbox or grid</li>
+                </ul>
+                <div class="code">@media (max-width:768px) { .container { flex-direction: column; } p { font-size:16px;
+                    } }</div>

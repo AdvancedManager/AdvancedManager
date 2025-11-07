@@ -1,0 +1,334 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Learn HTML — Full Tutorial</title>
+  <meta name="description" content="A full HTML tutorial with detailed explanations and examples for beginners." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(135deg, #0f1113 0%, #1b1d20 60%);
+      color: #e6eef6;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 36px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.02)
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #ff8a00, #ffb94d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(255, 136, 0, 0.12)
+    }
+
+    .brand h1 {
+      font-size: 18px;
+      letter-spacing: 0.6px
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      align-items: center
+    }
+
+    .nav a {
+      color: rgba(230, 238, 246, 0.8);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 6px
+    }
+
+    .nav a.active {
+      background: rgba(255, 136, 0, 0.08);
+      color: #ffb94d
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .search input {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 8px 12px;
+      border-radius: 8px;
+      color: inherit
+    }
+
+    .search button {
+      background: linear-gradient(180deg, #ff8a00, #ff6d00);
+      border: none;
+      padding: 9px 12px;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer
+    }
+
+    .hero {
+      padding: 80px 56px;
+      text-align: left
+    }
+
+    .eyebrow {
+      color: rgba(230, 238, 246, 0.65);
+      font-weight: 600;
+      margin-bottom: 16px
+    }
+
+    .title {
+      font-size: 72px;
+      line-height: 0.95;
+      color: #ffad33;
+      font-weight: 800;
+      margin-bottom: 8px;
+      text-shadow: 0 6px 20px rgba(0, 0, 0, 0.6)
+    }
+
+    .subtitle {
+      font-size: 48px;
+      color: #e6eef6;
+      font-weight: 700;
+      margin-bottom: 18px
+    }
+
+    .desc {
+      max-width: 760px;
+      color: rgba(230, 238, 246, 0.78);
+      font-size: 16px;
+      margin-bottom: 28px
+    }
+
+    .cta {
+      display: inline-block;
+      background: linear-gradient(180deg, #ff8a00, #ff6d00);
+      color: white;
+      padding: 14px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700
+    }
+
+    .lessons {
+      padding: 18px 56px 80px
+    }
+
+    .lesson {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.02)
+    }
+
+    .lesson h3 {
+      color: #ffd39a;
+      margin-bottom: 10px
+    }
+
+    .lesson p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+      color: #d9e4ef
+    }
+
+    .code {
+      background: #0b0c0d;
+      padding: 14px;
+      border-radius: 8px;
+      color: #cfe9ff;
+      font-family: monospace;
+      font-size: 13px;
+      overflow: auto;
+      margin-bottom: 10px
+    }
+
+    .footer-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 56px;
+      border-top: 1px solid rgba(255, 255, 255, 0.02);
+      margin-top: 24px
+    }
+
+    .next-btn {
+      background: linear-gradient(180deg, #ff8a00, #ff6d00);
+      padding: 12px 20px;
+      border-radius: 10px;
+      color: white;
+      font-weight: 700;
+      text-decoration: none
+    }
+
+    @media(max-width:980px) {
+      .title {
+        font-size: 48px
+      }
+
+      .subtitle {
+        font-size: 28px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">CR7</div>
+      <div>
+        <h1>WebLearn</h1>
+        <div style="font-size:12px;color:rgba(230,238,246,0.55)">HTML Tutorial</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="indexpro.html">Home</a>
+      <a href="#courses" class="active">HTML</a>
+      <a href="LearnCSS.html" class="active">CSS</a>
+       <a href="About.html">About</a>
+      
+      <div class="search"><input placeholder="Type to Search" aria-label="search"><button>Search</button></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="eyebrow">Web Design &</div>
+      <div class="title">Development</div>
+      <div class="subtitle">Learn HTML</div>
+      <p class="desc">HTML is the foundation of every website. In this tutorial, you'll learn how to structure content,
+        use tags effectively, and create well-formed web pages from scratch — step by step.</p>
+      <a class="cta" href="#lessons">Start Learning</a>
+    </section>
+    <section id="lessons" class="lessons">
+      <article class="lesson" id="intro">
+        <h3>1. What is HTML?</h3>
+        <p>HTML stands for <strong>HyperText Markup Language</strong>. It is used to structure the content of web pages
+          using elements known as <em>tags</em>.</p>
+        <p>Each tag has a specific role — for example, defining text, links, images, or layout sections. Tags usually
+          come in pairs: an opening tag <code>&lt;tag&gt;</code> and a closing tag <code>&lt;/tag&gt;</code>.</p>
+        <div class="code">&lt;h1&gt;This is a Heading&lt;/h1&gt;<br>&lt;p&gt;This is a paragraph.&lt;/p&gt;</div>
+      </article>
+      <article class="lesson" id="structure">
+        <h3>2. Basic HTML Document Structure</h3>
+        <p>Every HTML page begins with a <strong>DOCTYPE</strong> declaration followed by the <code>&lt;html&gt;</code>,
+          <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> sections.</p>
+        <div class="code">&lt;!doctype
+          html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;My First
+          Page&lt;/title&gt;<br>&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome
+          to HTML!&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Learning HTML is
+          fun.&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</div>
+        <p>The <code>&lt;head&gt;</code> section contains metadata, titles, and links to CSS or scripts, while the
+          <code>&lt;body&gt;</code> holds the visible content.</p>
+      </article>
+
+      <article class="lesson" id="headings">
+        <h3>3. Headings and Paragraphs</h3>
+        <p>HTML offers six levels of headings: <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code>
+          (least important). Paragraphs are written inside the <code>&lt;p&gt;</code> tag.</p>
+        <div class="code">&lt;h1&gt;Main Title&lt;/h1&gt;<br>&lt;h2&gt;Subtitle&lt;/h2&gt;<br>&lt;p&gt;This is a simple
+          paragraph explaining headings in HTML.&lt;/p&gt;</div>
+        <p>Headings help structure your content, improving both readability and SEO.</p>
+      </article>
+
+      <article class="lesson" id="links-images">
+        <h3>4. Links and Images</h3>
+        <p>Use the <code>&lt;a&gt;</code> tag to create hyperlinks and the <code>&lt;img&gt;</code> tag to insert
+          images.</p>
+        <div class="code">&lt;a href="https://example.com" target="_blank"&gt;Visit
+          Example&lt;/a&gt;<br>&lt;br&gt;<br>&lt;img src="https://via.placeholder.com/150" alt="Placeholder Image"&gt;
+        </div>
+        <p>The <code>href</code> attribute in the anchor tag defines the link destination, and <code>alt</code> in the
+          image tag describes the image for accessibility.</p>
+      </article>
+
+      <article class="lesson" id="lists">
+        <h3>5. Lists in HTML</h3>
+        <p>Lists help organize information. There are three main types:</p>
+        <ul>
+          <li><strong>Ordered list</strong> — numbered (<code>&lt;ol&gt;</code>).</li>
+          <li><strong>Unordered list</strong> — bulleted (<code>&lt;ul&gt;</code>).</li>
+          <li><strong>Definition list</strong> — term and description (<code>&lt;dl&gt;</code>).</li>
+        </ul>
+        <div class="code">&lt;h3&gt;My To-Do List&lt;/h3&gt;<br>&lt;ul&gt;<br>&nbsp;&nbsp;&lt;li&gt;Learn
+          HTML&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Practice CSS&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Build a
+          Website&lt;/li&gt;<br>&lt;/ul&gt;</div>
+      </article>
+
+      <article class="lesson" id="tables">
+        <h3>6. Tables</h3>
+        <p>Tables organize data into rows and columns. Use <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>,
+          <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> tags.</p>
+        <div class="code">&lt;table
+          border="1"&gt;<br>&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Age&lt;/th&gt;<br>&nbsp;&nbsp;&lt;/tr&gt;<br>&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Alice&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;24&lt;/td&gt;<br>&nbsp;&nbsp;&lt;/tr&gt;<br>&lt;/table&gt;
+        </div>
+      </article>
+
+      <article class="lesson" id="forms">
+        <h3>7. Forms</h3>
+        <p>Forms collect user input and send it to a server. Common elements include <code>&lt;input&gt;</code>,
+          <code>&lt;label&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;button&gt;</code>.</p>
+        <div class="code">&lt;form&gt;<br>&nbsp;&nbsp;&lt;label&gt;Name:&lt;/label&gt;<br>&nbsp;&nbsp;&lt;input
+          type="text" placeholder="Enter your
+          name"&gt;<br>&nbsp;&nbsp;&lt;br&gt;<br>&nbsp;&nbsp;&lt;button&gt;Submit&lt;/button&gt;<br>&lt;/form&gt;</div>
+      </article>
+
+      <article class="lesson" id="semantic">
+        <h3>8. Semantic Elements</h3>
+        <p>Semantic elements clearly describe their purpose in the document, improving readability and accessibility.
+        </p>
+        <div class="code">&lt;header&gt;Website Header&lt;/header&gt;<br>&lt;nav&gt;Navigation
+          Links&lt;/nav&gt;<br>&lt;main&gt;Main Content&lt;/main&gt;<br>&lt;footer&gt;Footer Information&lt;/footer&gt;
+        </div>
+      </article>
+
+      <article class="lesson" id="conclusion">
+        <h3>9. Summary</h3>
+        <p>Congratulations! You've learned the essential building blocks of HTML. You now understand how to create
+          pages, format content, add media, and structure websites effectively.</p>
+        <p>Next, you’ll move on to <strong>CSS</strong>, where you’ll learn how to make your HTML pages visually
+          beautiful and dynamic.</p>
+      </article>
+
+    </section>
+  </main>
+  <footer class="footer-cta">
+    <div>Finished HTML? Continue your learning journey.</div>
+    <a class="next-btn" href="LearnCSS.html">Next: Learn CSS</a>
+  </footer>
+</body>
+
+</html>
